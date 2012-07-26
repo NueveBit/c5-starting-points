@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <attributekeys>
+        <attributekey handle="tags" name="Tags" package="" searchable="1" indexed="1" type="select" category="collection">
+            <type allow-multiple-values="1" display-order="display_asc" allow-other-values="1">
+            </type>
+        </attributekey>
+    </attributekeys>
+    <themes>
+        <theme handle="greek_yogurt" package="" activated="1"/>
+    </themes>
+    <pagetypes>
+        <pagetype handle="full" name="Full" internal="0" icon="main.png" package="">
+            <page name="" path="" filename="" pagetype="full" description="" package="">
+                <area name="Main"/>
+            </page>
+        </pagetype>
+        <pagetype handle="left_sidebar" name="Left Sidebar" internal="0" icon="template1.png" package="">
+            <page name="" path="" filename="" pagetype="left_sidebar" description="" package="">
+                <area name="Sidebar"/>
+                <area name="Main"/>
+            </page>
+        </pagetype>
+        <pagetype handle="right_sidebar" name="Right Sidebar" internal="0" icon="right_sidebar.png" package="">
+            <page name="" path="" filename="" pagetype="right_sidebar" description="" package="">
+                <area name="Main"/>
+                <area name="Sidebar"/>
+            </page>
+        </pagetype>
+    </pagetypes>
+	<stacks>
+        <stack name="Header Nav" type="global_area">
+            <area name="Main">
+                <block type="autonav" name="">
+                    <data table="btNavigation">
+                        <record>
+                            <orderBy><![CDATA[display_asc]]></orderBy>
+                            <displayPages><![CDATA[top]]></displayPages>
+                            <displayPagesCID/>
+                            <displayPagesIncludeSelf><![CDATA[0]]></displayPagesIncludeSelf>
+                            <displaySubPages><![CDATA[none]]></displaySubPages>
+                            <displaySubPageLevels><![CDATA[enough]]></displaySubPageLevels>
+                            <displaySubPageLevelsNum><![CDATA[0]]></displaySubPageLevelsNum>
+                            <displayUnavailablePages><![CDATA[0]]></displayUnavailablePages>
+                        </record>
+                    </data>
+                </block>
+            </area>
+        </stack>
+		<stack name="Site Name" type="global_area">
+			<area name="Main">
+				<block type="content" name="">
+					<data table="btContentLocal">
+						<record>
+							<content><![CDATA[<h1><a title="Home" 
+								href="{ccm:export:page:}"
+							>{ccm:export:define:SITE}</a></h1>]]></content>
+						</record>
+					</data>
+				</block>
+			</area>
+		</stack>
+	</stacks>
+	<pages>
+		<page name="Home" path="" filename="" pagetype="right_sidebar" description="" package="">
+			<area name="Sidebar">
+			</area>
+			<area name="Main">
+			</area>
+		</page>
+	</pages>
+
+	<config>
+		<ENABLE_NEWSFLOW_OVERLAY>0</ENABLE_NEWSFLOW_OVERLAY>
+		<WHITE_LABEL_APP_NAME>9Bit :: Soluciones Creativas</WHITE_LABEL_APP_NAME>
+		<WHITE_LABEL_LOGO_SRC>http://www.nuevebit.com/images/logo_small.png</WHITE_LABEL_LOGO_SRC>
+	</config>
+</concrete5-cif>
