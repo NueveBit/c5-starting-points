@@ -1,0 +1,13 @@
+{
+    "name": "nuevebit/c5-starting-points",
+    "description": "Concrete5 Starting Points for NueveBit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Edgar Merino",
+            "email": "emerino@nuevebit.com",
+            "role": "Developer"
+        }
+    ]
+}
